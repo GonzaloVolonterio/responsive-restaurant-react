@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import images from '../../constants/images';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [toggleMenu,setToggleMenu] = useState("false");
-
+  const [toggleMenu, setToggleMenu] = React.useState(false);
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -30,11 +29,11 @@ const Navbar = () => {
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
             <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
             <ul className="app__navbar-smallscreen_links">
-              <li><a href="#home" onClick={() => {}}>Home</a></li>
-              <li><a href="#about" onClick={() => {}}>About</a></li>
-              <li><a href="#menu" onClick={() => {}}>Menu</a></li>
-              <li><a href="#awards" onClick={() => {}}>Awards</a></li>
-              <li><a href="#contact" onClick={() => {}}>Contact</a></li>
+              <li><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
+              <li><a href="#about" onClick={() => setToggleMenu(false)}>About</a></li>
+              <li><a href="#menu" onClick={() => setToggleMenu(false)}>Menu</a></li>
+              <li><a href="#awards" onClick={() => setToggleMenu(false)}>Awards</a></li>
+              <li><a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a></li>
             </ul>
           </div>
         )}
