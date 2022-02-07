@@ -9,6 +9,7 @@ React
 React-dom
 React-icons
 Figma
+Netlifly
 
 ```
 
